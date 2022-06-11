@@ -1,0 +1,188 @@
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+
+}
+
+#hangman {
+    width: 800px;
+    margin: 30px auto;
+}
+
+#word {
+    letter-spacing: 10px;
+    font-size: 4rem;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#output {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#output .step {
+    width: calc(100% / 8);
+
+
+}
+
+#output .step {
+    opacity: 0.1;
+}
+
+#output .step img {
+
+    width: 100%;
+}
+
+#category {
+    text-align: center;
+    padding: 30px 0px;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.words {
+    margin: 0;
+    bottom: 100px;
+
+}
+
+body {
+    background-color: #444;
+    animation: sky 100s infinite linear;
+    z-index: -1;
+}
+
+.sun {
+    position: fixed;
+    bottom: 15%;
+    left: 10%;
+    width: 15vw;
+    height: 15vw;
+    background-color: darkred;
+    border-radius: 50%;
+    animation: sun 100s infinite linear;
+    z-index: -1;
+}
+
+.grass {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30vh;
+    background-color: #222;
+    animation: grass 100s linear infinite;
+    z-index: -1;
+}
+
+@keyframes sky {
+    0% {
+        background-color: #444;
+    }
+
+    20% {
+        background-color: rgb(112, 94, 97);
+    }
+
+    50% {
+        background-color: lightblue;
+    }
+
+    80% {
+        background-color: rgb(112, 94, 97);
+        ;
+    }
+
+    100% {
+        background-color: #444;
+    }
+}
+
+@keyframes grass {
+    0% {
+        background-color: #222;
+    }
+
+    20% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: greenyellow;
+    }
+
+    80% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: #222;
+    }
+}
+
+@keyframes sun {
+    0% {
+        bottom: 15%;
+        left: 10%;
+        background-color: darkred;
+    }
+
+    50% {
+        bottom: 45%;
+        background-color: yellow;
+    }
+
+    100% {
+        bottom: 15%;
+        left: 90%;
+        background-color: darkred;
+    }
+}
+
+button {
+    position: relative;
+    padding: 12px 25px;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 15px;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+    overflow: hidden;
+    color: #fff;
+    transition: .25s .05s linear;
+
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+button:hover::before {
+    height: 100%;
+
+}
+
+button:hover {
+    color: red;
+}
+
+.reset {
+    margin-top: 30px;
+    margin-left: 270px;
+    margin-top: 20px;
+
+}
